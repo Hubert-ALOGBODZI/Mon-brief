@@ -1,0 +1,123 @@
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+html{
+  scroll-behavior: smooth;
+}
+/*===========================================navbar====================================================*/
+nav{
+  background: #0F5463;
+  height: 80px;
+  width: 100%;
+  position: fixed;
+  z-index: 3;
+}
+label.logo{
+  color: white;
+  font-size: 35px;
+  line-height: 80px;
+  padding: 0 100px;
+  font-weight: bold;
+}
+nav ul{
+  float: right;
+  margin-right: 20px;
+  line-height: 80px;
+}
+nav ul li{
+  display: inline-block;
+  margin: 0 5px;
+  border-radius: 3px;
+  padding: 7px 13px;
+}
+nav ul li a{
+  color: white;
+  text-transform: uppercase;
+  text-decoration: none;
+  list-style: none;
+}
+nav ul li:nth-child(5) a{
+  background-color: aliceblue;
+   border: 1px solid black;
+   color: #0F5463;
+   border-radius: 6em;
+  padding: 5%;
+}
+nav ul li a.active,
+nav ul li a:hover{
+  color:#2BB9D8;
+  transition: .5s;
+}
+/* nav ul li Link .localisation{
+   background-color: aliceblue;
+   border: 1px solid black;
+   color: #0F5463;
+   /* width: 80px;
+   height: 60px; 
+} */
+.checkbtn{
+  font-size: 30px;
+  color:white;
+  float: right;
+  line-height: 80px;
+  margin-right: 40px;
+  cursor: pointer;
+  display: none;
+}
+
+
+#check{
+  display: none;
+}
+@media(max-width:952px) {
+  label.logo{
+      font-size: 25px;
+      padding-left: 50px;
+  }
+}
+
+@media (max-width:852px){
+  .checkbtn{
+      display: block;
+  }
+  #check{
+      float: right;
+  }
+  ul{
+      position: fixed;
+      width: 50%;
+      height: 40%;
+      margin-left: 50%;
+      background: #2c3e50;
+      top: 80px;
+      left: -100%;
+      text-align: center;
+      transition: all .5s;
+      z-index: 2;
+  }
+  nav ul li{
+      display: block;
+      line-height: 2px;
+      margin-top: 2em;
+  }
+  nav ul li a:hover{
+      color:green;
+      transition: .4s;
+  }
+  nav ul li a{
+      font-size: 20px;
+  }
+  nav ul li a:hover,
+  nav ul li a.active{
+      background: none;
+      color: green;
+  }
+  #check:checked~ul{
+      left: 0;
+  }
+}

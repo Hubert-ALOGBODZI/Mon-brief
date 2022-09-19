@@ -1,0 +1,60 @@
+.Consultation{
+    width: 100%;
+    height: 90vh;
+    background-color: #328395;
+    align-items: center;
+    justify-content: center;
+    gap: 15%;
+    display: flex;
+    flex-direction: column;
+}
+h1{color: white;}
+.Consultation .infos{
+    background-color: #2BB9D8;
+    height: 500px;
+    width: 600px;
+    /* margin-top: 3%; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+}
+.Consultation .infos .infos1{
+    background-color: #328395;
+    height: 250px;
+    width: 500px;  
+    display: flex;
+    color: white;
+    align-items: center;
+    justify-content: center;
+}
+
+.Consultation .infos .infos2{
+    height: 100px;
+    width: 400px;
+    display: flex;
+    align-items: center;
+    gap: 50%;
+    justify-content: center;
+}
+.Consultation .infos .infos2 button{
+    height: 40px;
+    width:150px;
+    border-radius: 2em;
+}
+.Consultation .infos .infos3{
+    background-color:white;
+    height: 50px;
+    width: 500px;
+    gap: 2%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.Consultation .infos .infos3 span:nth-child(1){
+    color: red;
+}
+.Consultation .infos .infos3 span:nth-child(2){
+    text-transform: uppercase;
+}
