@@ -1,3 +1,4 @@
+import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import { HospitalImage } from "../Data/Photo_du_centre";
 
 // import acctof from "../images/pexels-ivan-samkov-4989168.jpg"
@@ -11,15 +12,15 @@ import "../CSS/Localisation.css";
 // import { Container, Row, Tabs, Tab } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 
-import {
-  MDBTabs,
-  MDBTabsItem,
-  MDBTabsLink,
-  MDBTabsContent,
-  MDBTabsPane,
-  MDBRow,
-  MDBCol,
-} from "mdb-react-ui-kit";
+// import {
+//   MDBTabs,
+//   MDBTabsItem,
+//   MDBTabsLink,
+//   MDBTabsContent,
+//   MDBTabsPane,
+//   MDBRow,
+//   MDBCol,
+// } from "mdb-react-ui-kit";
 
 const Localisation = () => {
   const [currentTab, setCurrentTab] = useState("1");
@@ -55,7 +56,7 @@ const Localisation = () => {
   };
   const [verticalActive, setVerticalActive] = useState("tab1");
 
-  const handleVerticalClick = (value ="string") => {
+  const handleVerticalClick = (value = "string") => {
     if (value === verticalActive) {
       return;
     }
@@ -64,12 +65,13 @@ const Localisation = () => {
   };
   return (
     <div className="urgence">
-      <MDBRow>
-        <h1>URGENCES</h1>
+      <h1>URGENCES</h1>
+      <Tabs>
         <div className="hopitaux">
           <div className="hopitaux_left">
             <h3>HOPITAUX PROCHES</h3>
-            <MDBCol>
+
+            <TabList className="hopitaux_left">
               <div
                 className="different"
                 style={{
@@ -78,56 +80,49 @@ const Localisation = () => {
                   backgroundSize: "cover",
                 }}
               >
-                <MDBTabs pills className="flex-column ">
-                  <MDBTabsItem>
-                    <MDBTabsLink
-                      style={{ backgroundColor: "none" }}
-                      onClick={() => handleVerticalClick("tab1")}
-                      active={verticalActive === "tab1"}
-                    >
-                      <div className="card">
-                        <span>Hopital de bé</span>
-                        <p>à 1 km de chez vous</p>
-                      </div>
-                    </MDBTabsLink>
-
-                    <MDBTabsLink
-                      onClick={() => handleVerticalClick("tab2")}
-                      active={verticalActive === "tab2"}
-                    >
-                      <div className="card">
-                        <span>Hopital de bé</span>
-                        <p>à 1 km de chez vous</p>
-                      </div>
-                    </MDBTabsLink>
-                  </MDBTabsItem>
-                </MDBTabs>
+                <Tab>
+                  <div className="card">
+                    <span>Hopital de bé</span>
+                    <p>à 1 km de chez vous</p>
+                  </div>
+                </Tab>
+                <Tab>
+                  <div className="card">
+                    <span>Hopital de bé</span>
+                    <p>à 1 km de chez vous</p>
+                  </div>
+                </Tab>
+                <Tab>
+                  <div className="card">
+                    <span>Hopital de bé</span>
+                    <p>à 1 km de chez vous</p>
+                  </div>
+                </Tab>
               </div>
-            </MDBCol>
+            </TabList>
           </div>
-          <MDBCol>
-            <MDBTabsContent>
-              <div className="hopitaux_right">
-                <h3>HOPITAL DE BÉ</h3>
 
-                <MDBTabsPane show={verticalActive === "tab1"} className="output">
-                  <div className="info_hopital">
-                    <div className="visuel">
-                      <div className="visuel1">
-                        <h4>VISUEL DU CENTRE</h4>
-                        <div className="card_visuel">
-                          {HospitalImage.map((post) => {
-                            return (
-                              <div className="card">
-                                <img
-                                  src={post.img}
-                                  style={{ width: "100%", height: "100%" }}
-                                  alt=""
-                                />
-                              </div>
-                            );
-                          })}
-                          {/* <div className="card">
+          <div className="hopitaux_right">
+            <h3>HOPITAL DE BÉ</h3>
+            <TabPanel>
+              <p>
+                <div className="info_hopital">
+                  <div className="visuel">
+                    <div className="visuel1">
+                      <h4>VISUEL DU CENTRE</h4>
+                      <div className="card_visuel">
+                        {HospitalImage.map((post) => {
+                          return (
+                            <div className="card">
+                              <img
+                                src={post.img}
+                                style={{ width: "100%", height: "100%" }}
+                                alt=""
+                              />
+                            </div>
+                          );
+                        })}
+                        {/* <div className="card">
             <img src={acctof4} style={{ width: "100%", height: "100%"}} alt="" />
             </div>
             <div className="card">
@@ -143,53 +138,55 @@ const Localisation = () => {
             <img src={acctof4} style={{ width: "100%", height: "100%"}} alt="" />
             </div>
         </div> */}
-                        </div>
-                      </div>
-
-                      <div className="spécialités">
-                        <h4>SPÉCIALITÉS</h4>
-                        <div className="info">
-                          <span>Lorem ipsum dolor sit amet.</span>
-                          <br />
-                          <span>Lorem ipsum dolor sit amet.</span>
-                          <br />
-                          <span>Lorem ipsum dolor sit amet.</span>
-                          <br />
-                          <span>Lorem ipsum dolor sit amet.</span>
-                          <br />
-                          <span>Lorem ipsum dolor sit amet.</span>
-                          <br />
-                        </div>
-                      </div>
-                      <div className="map_director">
-                        <div className="message">
-                          clique pour réserver une place -------
-                        </div>
-                        {/* <Link to="/Home"> */}
-                        <button>REJOINDRE</button>
-                        {/* </Link> */}
                       </div>
                     </div>
+
+                    <div className="spécialités">
+                      <h4>SPÉCIALITÉS</h4>
+                      <div className="info">
+                        <span>Lorem ipsum dolor sit amet.</span>
+                        <br />
+                        <span>Lorem ipsum dolor sit amet.</span>
+                        <br />
+                        <span>Lorem ipsum dolor sit amet.</span>
+                        <br />
+                        <span>Lorem ipsum dolor sit amet.</span>
+                        <br />
+                        <span>Lorem ipsum dolor sit amet.</span>
+                        <br />
+                      </div>
+                    </div>
+                    <div className="map_director">
+                      <div className="message">
+                        clique pour réserver une place -------
+                      </div>
+                      {/* <Link to="/Home"> */}
+                      <button>REJOINDRE</button>
+                      {/* </Link> */}
+                    </div>
                   </div>
-                </MDBTabsPane>
-                <MDBTabsPane show={verticalActive === "tab2"} className="output">
-                  <div className="info_hopital">
-                    <div className="visuel">
-                      <div className="visuel1">
-                        <h4>VISUEL DU CENTRE</h4>
-                        <div className="card_visuel">
-                          {HospitalImage.map((post) => {
-                            return (
-                              <div className="card">
-                                <img
-                                  src={post.img}
-                                  style={{ width: "100%", height: "100%" }}
-                                  alt=""
-                                />
-                              </div>
-                            );
-                          })}
-                          {/* <div className="card">
+                </div>
+              </p>
+            </TabPanel>
+            <TabPanel>
+              <p>
+                <div className="info_hopital">
+                  <div className="visuel">
+                    <div className="visuel1">
+                      <h4>VISUEL DU CENTRE</h4>
+                      <div className="card_visuel">
+                        {HospitalImage.map((post) => {
+                          return (
+                            <div className="card">
+                              <img
+                                src={post.img}
+                                style={{ width: "100%", height: "100%" }}
+                                alt=""
+                              />
+                            </div>
+                          );
+                        })}
+                        {/* <div className="card">
             <img src={acctof4} style={{ width: "100%", height: "100%"}} alt="" />
             </div>
             <div className="card">
@@ -205,40 +202,45 @@ const Localisation = () => {
             <img src={acctof4} style={{ width: "100%", height: "100%"}} alt="" />
             </div>
         </div> */}
-                        </div>
-                      </div>
-
-                      <div className="spécialités">
-                        <h4>SPÉCIALITÉS</h4>
-                        <div className="info">
-                          <span>Lorem ipsum dolor sit amet.</span>
-                          <br />
-                          <span>Lorem ipsum dolor sit amet.</span>
-                          <br />
-                          <span>Lorem ipsum dolor sit amet.</span>
-                          <br />
-                          <span>Lorem ipsum dolor sit amet.</span>
-                          <br />
-                          <span>Lorem ipsum dolor sit amet.</span>
-                          <br />
-                        </div>
-                      </div>
-                      <div className="map_director">
-                        <div className="message">
-                          clique pour réserver une place -------
-                        </div>
-                        {/* <Link to="/Home"> */}
-                        <button>REJOINDRE</button>
-                        {/* </Link> */}
                       </div>
                     </div>
+
+                    <div className="spécialités">
+                      <h4>SPÉCIALITÉS</h4>
+                      <div className="info">
+                        <span>Lorem ipsum dolor sit amet.</span>
+                        <br />
+                        <span>Lorem ipsum dolor sit amet.</span>
+                        <br />
+                        <span>Lorem ipsum dolor sit amet.</span>
+                        <br />
+                        <span>Lorem ipsum dolor sit amet.</span>
+                        <br />
+                        <span>Lorem ipsum dolor sit amet.</span>
+                        <br />
+                      </div>
+                    </div>
+                    <div className="map_director">
+                      <div className="message">
+                        clique pour réserver une place -------
+                      </div>
+                      {/* <Link to="/Home"> */}
+                      <button>
+                        {" "}
+                        <a href="https://goo.gl/maps/X6FpHN354HfT5n1p8">
+                          REJOINDRE
+                        </a>
+                      </button>
+                      {/* </Link> */}
+                    </div>
                   </div>
-                </MDBTabsPane>
-              </div>
-            </MDBTabsContent>
-          </MDBCol>
+                </div>
+              </p>
+            </TabPanel>
+            <TabPanel>1</TabPanel>
+          </div>
         </div>
-      </MDBRow>
+      </Tabs>
     </div>
   );
 };

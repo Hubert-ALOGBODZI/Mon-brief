@@ -16,6 +16,8 @@ import Register from "./pagesFake/Register";
 import "./style.scss";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 
+import Geolocalisation from "./Geolocalisation/Geolocalisation"
+
 import Login from "./Authentification/Login";
 
 import Signup from "./Authentification/Signup";
@@ -38,6 +40,8 @@ import TabC from "./Tabcomponent/TabC";
 import Boot from "./Tabcomponent/Boot/Boot";
 // import SImpleTabs from "./SImpleTabs/SImpleTabs";
 
+
+import NavBar from "./components/Navbar";
 import { auth } from "./Authentification/Firebase";
 import { useEffect } from "react";
 import { useState } from "react";
@@ -62,9 +66,10 @@ useEffect(() => {
           {/* <Tabs /> */}
           {/* <Consultation /> */}
 
-          <Route path="/" element={<Home />} />
-          {/* <Route path="/" element={<Boot />} /> */}
-          {/* <Route path="/a" element={<Localisation />} /> */}
+          {/* <Route path="/" element={<Showtab />} /> */}
+          <Route path="/" element={<NavBar />} />
+          {/* <Route path="/" element={<Geolocalisation />} /> */}
+          {/* <Route path="/a" element={<AddUser />} /> */}
           {/* <Route path="/SImpleTabs" element={<SImpleTabs />} /> */}
 
           {/* <Route path="/login" element={<Login />} />
