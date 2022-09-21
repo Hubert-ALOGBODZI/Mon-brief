@@ -1,19 +1,20 @@
-import React from "react";
-import { Link } from "react-router-dom";
-
-import InputControl from "./InputControl";
-
-import "../CSS/Login.css";
+import React, { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import { signInWithEmailAndPassword } from "firebase/auth";
 
+import InputControl from "./InputControl";
+import { auth } from "./Firebase";
 
-const Login = () => {
+import "../CSS/Login.css";
 
-
+function Login() {
+  const navigate = useNavigate();
   const [values, setValues] = useState({
     email: "",
     password: "",
   });
+  const [errorMsg, setErrorMsg] = useState("");
+  const [submitButtonDisabled, setSubmitButtonDisabled] = useState(false);
 
   const handleSubmission = () => {
     if (!values.email || !values.password) {
@@ -22,23 +23,19 @@ const Login = () => {
     }
     setErrorMsg("");
 
-    // console.log(values);
-
     setSubmitButtonDisabled(true);
     signInWithEmailAndPassword(auth, values.email, values.password)
       .then(async (res) => {
-          setSubmitButtonDisabled(false);
-          navigate("/");
-        console.log(user);
+        setSubmitButtonDisabled(false);
+
+        // console.log(user);
+        navigate("/");
       })
       .catch((err) => {
         setSubmitButtonDisabled(false);
         setErrorMsg(err.message);
-        // console.log("Error", err.message);
       });
   };
-
-
   return (
     <div className="Login">
       <div className="innerBox">
@@ -60,22 +57,22 @@ const Login = () => {
         />
 
         <div className="footer">
-            <p className="error">{errorMsg}</p>
+          <b className="error">{errorMsg}</b>
           <button onClick={() => {
               setSubmitButtonDisabled(true);
               handleSubmission();
             }}
             disabled={submitButtonDisabled}>Login</button>
           <p>
-            Already have an Account ? {" "}
+            Already have an account?{" "}
             <span>
-              <Link to="/signup">Sign Up</Link>
+              <Link to="/signup">Sign up</Link>
             </span>
           </p>
         </div>
       </div>
     </div>
   );
-};
+}
 
 export default Login;

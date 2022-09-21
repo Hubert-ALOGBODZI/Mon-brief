@@ -46,6 +46,8 @@ import { auth } from "./Authentification/Firebase";
 import { useEffect } from "react";
 import { useState } from "react";
 
+// import Sectionadmin from "./AdminH/Sectionadmin";
+
 function App() {
 const [userName , setUserName] = useState("");
 useEffect(() => {
@@ -67,14 +69,15 @@ useEffect(() => {
           {/* <Consultation /> */}
 
           {/* <Route path="/" element={<Showtab />} /> */}
-          <Route path="/" element={<NavBar />} />
+          {/* <Route path="/" element={<NavBar />} /> */}
+          {/* <Route path="/" element={<Sectionadmin />} /> */}
           {/* <Route path="/" element={<Geolocalisation />} /> */}
           {/* <Route path="/a" element={<AddUser />} /> */}
           {/* <Route path="/SImpleTabs" element={<SImpleTabs />} /> */}
 
-          {/* <Route path="/login" element={<Login />} />
-          <Route path="/signup" element={<Signup />} />
-          <Route path="/" element={<HomeA name={userName} />} /> */}
+           <Route path="/login" element={<Login />} />
+        <Route path="/signup" element={<Signup />} />
+          <Route path="/" element={<HomeA name={userName} />} /> 
 
 
           {/* <Route path="/" element={<UserList />} /> */}
