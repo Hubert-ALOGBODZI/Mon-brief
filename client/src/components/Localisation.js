@@ -161,7 +161,7 @@ const Localisation = () => {
                         clique pour réserver une place -------
                       </div>
                       {/* <Link to="/Home"> */}
-                      <button>REJOINDRE</button>
+                      <button>Itinéraire</button>
                       {/* </Link> */}
                     </div>
                   </div>
@@ -228,7 +228,7 @@ const Localisation = () => {
                       <button>
                         {" "}
                         <a href="https://goo.gl/maps/X6FpHN354HfT5n1p8">
-                          REJOINDRE
+                          Itinéraire
                         </a>
                       </button>
                       {/* </Link> */}

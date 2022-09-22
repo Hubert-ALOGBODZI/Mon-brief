@@ -21,18 +21,18 @@ const Contact = () => {
       .then(
         (result) => {
           console.log(result.text);
-        //   console.log("message sent");
+          //   console.log("message sent");
         },
         (error) => {
           console.log(error.text);
         }
       );
   };
-  function refreshPage(e){ 
-    window.location.reload(); 
-  //   e.preventDefault();
-  // console.log('Le lien a été cliqué.');
-}
+  function refreshPage(e) {
+    window.location.reload();
+    //   e.preventDefault();
+    // console.log('Le lien a été cliqué.');
+  }
 
   return (
     <div className="main">
@@ -76,7 +76,7 @@ const Contact = () => {
                 <input
                   type="text"
                   name="user_name"
-                  style={{ width: "73%", height: "70px" }}
+               
                   placeholder="VOTRE NOM"
                 />
               </div>
@@ -85,7 +85,7 @@ const Contact = () => {
                 <input
                   type="email"
                   name="user_email"
-                  style={{ width: "73%", height: "70px" }}
+                  
                   placeholder="VOTRE MAIL"
                   required
                 />
@@ -94,13 +94,18 @@ const Contact = () => {
             <div className="area">
               <span>Votre message</span>
 
-              <textarea cols="70" rows="7"
-              name="user_message" required></textarea>
+              <textarea
+                cols="70"
+                rows="7"
+                name="user_message"
+                required
+              ></textarea>
             </div>
             <br />
-            <button onClick={ refreshPage } className={{}}>SEND</button>
+            <button onClick={refreshPage} className={{}}>
+              SEND
+            </button>
             {/* <input type="submit" value="Send" /> */}
-            
           </form>
         </div>
       </div>

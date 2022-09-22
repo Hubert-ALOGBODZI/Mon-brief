@@ -16,7 +16,7 @@ import Register from "./pagesFake/Register";
 import "./style.scss";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 
-import Geolocalisation from "./Geolocalisation/Geolocalisation"
+import Geolocalisation from "./Geolocalisation/Geolocalisation";
 
 import Login from "./Authentification/Login";
 
@@ -40,7 +40,6 @@ import TabC from "./Tabcomponent/TabC";
 import Boot from "./Tabcomponent/Boot/Boot";
 // import SImpleTabs from "./SImpleTabs/SImpleTabs";
 
-
 import NavBar from "./components/Navbar";
 import { auth } from "./Authentification/Firebase";
 import { useEffect } from "react";
@@ -49,16 +48,15 @@ import { useState } from "react";
 // import Sectionadmin from "./AdminH/Sectionadmin";
 
 function App() {
-const [userName , setUserName] = useState("");
-useEffect(() => {
-  auth.onAuthStateChanged((user)=>{
-    if(user){
-      setUserName(user.displayName);
-    }else setUserName("");
-    // console.log(user);
-  });
-}, [])
-
+  const [userName, setUserName] = useState("");
+  useEffect(() => {
+    auth.onAuthStateChanged((user) => {
+      if (user) {
+        setUserName(user.displayName);
+      } else setUserName("");
+      // console.log(user);
+    });
+  }, []);
 
   return (
     <BrowserRouter>
@@ -68,6 +66,8 @@ useEffect(() => {
           {/* <Tabs /> */}
           {/* <Consultation /> */}
 
+          <Route path="/" element={<Home />} />
+          {/* <Route path="/" element={<Consultation />} /> */}
           {/* <Route path="/" element={<Showtab />} /> */}
           {/* <Route path="/" element={<NavBar />} /> */}
           {/* <Route path="/" element={<Sectionadmin />} /> */}
@@ -75,12 +75,12 @@ useEffect(() => {
           {/* <Route path="/a" element={<AddUser />} /> */}
           {/* <Route path="/SImpleTabs" element={<SImpleTabs />} /> */}
 
-           <Route path="/login" element={<Login />} />
-        <Route path="/signup" element={<Signup />} />
-          <Route path="/" element={<HomeA name={userName} />} /> 
+          {/* <Route path="/login" element={<Login />} /> */}
+          {/* <Route path="/signup" element={<Signup />} /> */}
+          {/* <Route path="/signup" element={<Signup />} /> */}
+          {/* <Route path="/" element={<HomeA name={userName} />} /> */}
 
-
-          {/* <Route path="/" element={<UserList />} /> */}
+          {/* <Route path="/a" element={<UserList />} /> */}
           {/* <Route path="/add" element={<AddUser />} /> */}
           {/* <Route path="/edit/:id" element={<EditUser />} />  */}
         </Routes>

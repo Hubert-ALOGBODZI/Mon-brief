@@ -61,7 +61,8 @@ function NavBar() {
     <Navbar
       style={{
         background: "#0F5463",
-      }}
+    }}
+      
       expand="lg"
     >
       <Container fluid>
@@ -89,7 +90,7 @@ function NavBar() {
               }}
               href="#action1"
             >
-              Home
+              Acceuil
             </Nav.Link>
             <Nav.Link
               href="#action2"
@@ -98,45 +99,37 @@ function NavBar() {
                   fontSize:"20px",
               }}
             >
-              Link
+              Hopitaux proches
             </Nav.Link>
             <Nav.Link
-              href="#action2"
+              href="/Localisation"
               style={{
                   color: "white",
                   fontSize:"20px",
               }}
             >
-              Link
+              Consultaion
             </Nav.Link>
-            <Nav.Link
-              href="#action2"
-              style={{
-                  color: "white",
-                  fontSize:"20px",
-              }}
-            >
-              Link
-            </Nav.Link>
+           
             <NavDropdown
-              title="Link"
+              title="A propos"
               id="navbarScrollingDropdown"
               style={{
                   fontSize:"20px",
-                color: "white",
+                color:"#fff",
+                background:"white",
+                borderRadius:"10px",
+                height:"50px"
               }}
             >
-              <NavDropdown.Item href="#action3">Action</NavDropdown.Item>
-              <NavDropdown.Item href="#action4">
-                Another action
-              </NavDropdown.Item>
+              <NavDropdown.Item href="#action3">Services</NavDropdown.Item>
               <NavDropdown.Divider />
               <NavDropdown.Item href="#action5">
-                Something else here
+                Partenaires
               </NavDropdown.Item>
             </NavDropdown>
             <Nav.Link href="#" disabled>
-              Link
+            Services
             </Nav.Link>
           </Nav>
         </Navbar.Collapse>

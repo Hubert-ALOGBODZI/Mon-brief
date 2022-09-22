@@ -12,9 +12,9 @@ Content-Type: application/json
     "name": "jojo",
     "firstName": "DOZ",
     "email":"DOZ@gmail.com",
-    "age":"122",
-    "date": 16,
-    "rdv":"343"
+    "age":"22",
+    "date": "2022-09-01",
+    "rdv":"En ligne"
 }
 
 

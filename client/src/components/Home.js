@@ -1,6 +1,3 @@
-
-
-
 // import {
 //     MDBCarousel,
 //     MDBCarouselItem,
@@ -16,21 +13,33 @@
 
 // import { BrowserRouter as Router, Routes } from 'react-router-dom';
 
-
-
-import "../CSS/Home.css"
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import NavBar from "./Navbar";
+import LandingPage from "./LandingPage";
+import Localisation from "./Localisation";
+import Contact from "./Contact";
+import Footer from "./Footer";
+import "../CSS/Home.css";
 const Home = () => {
-    return (
-    
-           
-               <h3>home</h3>
-            
-        
-
-
-
-
-    );
-}
+  return (
+    <>
+    <NavBar />
+    <LandingPage />
+    <Localisation />
+    <Contact />
+    <Footer />
+    </>
+    // <BrowserRouter>
+    //   <div className="Home">
+    //     <Routes>
+    //       <Route path="/" element={<LandingPage />} />
+    //       <Route path="/Localisation" element={<Localisation />} />
+    //       <Route path="/Contact" element={<Contact />} />
+    //       <Route path="/Footer" element={<Footer />} />
+    //     </Routes>
+    //   </div>
+    // </BrowserRouter>
+  );
+};
 
 export default Home;
