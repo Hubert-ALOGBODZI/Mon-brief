@@ -150,7 +150,7 @@ const Consultation = () => {
 
   return (
     <div className="Consultation">
-      <h1>Consultation</h1>
+      <h2>Consultation</h2>
       <form action="" onSubmit={saveUser}>
         <div className="infos">
           <div className="infos1">
@@ -185,6 +185,7 @@ const Consultation = () => {
                   />
                 </td>
               </tr>
+              <br />
               <tr>
                 <td>
                   <span>Email</span>
@@ -235,7 +236,7 @@ const Consultation = () => {
             </table>
           </div>
           <div className="infos2">
-            <button onClick={() => setRdv("en ligne")}>EN LIGNE</button>
+            <button onClick={() => setRdv("en ligne")}>En_Ligne</button>
             <button onClick={() => setRdv("en presentiel")}>Présentiel</button>
           </div>
           <div className="infos3">

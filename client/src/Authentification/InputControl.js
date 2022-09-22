@@ -4,7 +4,7 @@ import "../CSS/InputControl.css"
 
 const InputControl = (props) => {
   return (
-    <div className='InputControl'>
+    <div className='InputControl '>
        {
         props.label && <label>{props.label}</label>
        } 

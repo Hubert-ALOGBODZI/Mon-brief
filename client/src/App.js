@@ -66,8 +66,8 @@ function App() {
           {/* <Tabs /> */}
           {/* <Consultation /> */}
 
-          <Route path="/" element={<Home />} />
-          {/* <Route path="/" element={<Consultation />} /> */}
+          <Route path="/Home" element={<Home />} />
+          <Route path="/" element={<Consultation />} />
           {/* <Route path="/" element={<Showtab />} /> */}
           {/* <Route path="/" element={<NavBar />} /> */}
           {/* <Route path="/" element={<Sectionadmin />} /> */}
@@ -75,9 +75,8 @@ function App() {
           {/* <Route path="/a" element={<AddUser />} /> */}
           {/* <Route path="/SImpleTabs" element={<SImpleTabs />} /> */}
 
-          {/* <Route path="/login" element={<Login />} /> */}
-          {/* <Route path="/signup" element={<Signup />} /> */}
-          {/* <Route path="/signup" element={<Signup />} /> */}
+          <Route path="/login" element={<Login />} />
+          <Route path="/Signup" element={<Signup />} />
           {/* <Route path="/" element={<HomeA name={userName} />} /> */}
 
           {/* <Route path="/a" element={<UserList />} /> */}

@@ -46,12 +46,12 @@
   }
   .Signup .footer button:hover{
     background-color: #2bb9d8;
-  
+    
   }
   
   .Signup .footer button:disabled{
     background-color: gray !important;
-  
+    
   }
   
   .Signup .footer p{
@@ -60,8 +60,9 @@
   }
   
   .Signup .footer p span a{
-      font-weight: bold;
-      color: #22798c;
-      letter-spacing: .1em;
-      text-decoration: none;
+    font-weight: bold;
+    color: #22798c;
+    letter-spacing: .1em;
+    text-decoration: none;
   }
+  
