@@ -39,7 +39,7 @@
 }
 
 .urgence .hopitaux .hopitaux_left .different .card:nth-child(1) {
-    border-top: #2BB9D8 solid 10px;
+    border-top: #2BB9D8 solid 5px;
 }
 
 .urgence .hopitaux .hopitaux_left .different .card {
@@ -51,6 +51,10 @@
     width: 600px;
     height: 70px;
     justify-content: center;
+}
+.urgence .hopitaux .hopitaux_left .different .card span:nth-child(1){
+    color: #2BB9D8;
+    font-size: 100%;
 }
 
 
@@ -65,6 +69,9 @@
     height: 500px;
     align-items: center;
     background-color:#126678;
+}
+.urgence .hopitaux .hopitaux_right h3{
+    padding-top: 0%;
 }
 
 .urgence .hopitaux .hopitaux_right .info_hopital {
@@ -142,17 +149,39 @@
 
 .urgence .hopitaux .hopitaux_right .info_hopital .visuel .map_director{
     display: flex;
+    flex-direction: row;
     gap: 44%;
     width: 600px;
     height:100px;
     
 }
+.urgence .hopitaux .hopitaux_right .info_hopital .visuel .map_director .message{
+    width: 100%;
+    height:10px;
+    
+}
 .urgence .hopitaux .hopitaux_right .info_hopital .visuel .map_director button{
-    padding: 2px;
-    border-radius: 10px;
+    padding: 1px;
+    border-radius: 20px;
+    background-color:#126678;
+}
+.urgence .hopitaux .hopitaux_right .info_hopital .visuel .map_director button a{
+    text-decoration: none;
+    color: white;
+
     
 }
 
+.urgence .hopitaux .hopitaux_right .info_hopital .visuel .map_director button:focus{
+    outline-color: transparent;
+    outline-style:solid;
+    box-shadow: 0 0 0 4px #2BB9D8;
+    transition: 0.7s;
+    padding: 5px;
+    width: 200px;
+    border-radius: 10px;
+    
+}
 
 
 
@@ -222,6 +251,9 @@
         justify-content: center;
         align-items: center;
     }
+    .urgence .hopitaux .hopitaux_left .different li .card span:nth-child(1){
+        font-size: 60%;
+    }
     
     .urgence .hopitaux .hopitaux_left .different {
         display: flex;
@@ -266,6 +298,12 @@
    
    
    
+   
+   
+   .urgence .hopitaux .hopitaux_right h3{
+    font-size: 90%;
+    text-align: center;
+}
    
    
    

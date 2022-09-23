@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
 // import { deleteUser } from "firebase/auth";
+import Admin from "../components/Admin";
+import "../CSS/UserList.css"
 
 const UserList = () => {
   const [users, setUser] = useState([]);
@@ -42,6 +44,7 @@ const UserList = () => {
               <th>age</th>
               <th>date</th>
               <th>rdv</th>
+              <th>Actions</th>
             </tr>
           </thead>
           <tbody>

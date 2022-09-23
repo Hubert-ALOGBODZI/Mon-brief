@@ -120,6 +120,7 @@ import axios from "axios";
 // import { useNavigate } from "react-router-dom";
 
 import "../CSS/Consultation.css";
+import NavBar from "./Navbar";
 
 // const navigate = useNavigate();
 
@@ -149,6 +150,8 @@ const Consultation = () => {
   };
 
   return (
+    <>
+    <NavBar />
     <div className="Consultation">
       <h2>Consultation</h2>
       <form action="" onSubmit={saveUser}>
@@ -246,6 +249,8 @@ const Consultation = () => {
         </div>
       </form>
     </div>
+    </>
+
   );
 };
 

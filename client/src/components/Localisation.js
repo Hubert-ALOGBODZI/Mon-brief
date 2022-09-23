@@ -11,6 +11,7 @@ import { useNavigate } from "react-router";
 import "../CSS/Localisation.css";
 // import { Container, Row, Tabs, Tab } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
+import { Button } from "react-bootstrap";
 
 // import {
 //   MDBTabs,
@@ -82,19 +83,31 @@ const Localisation = () => {
               >
                 <Tab>
                   <div className="card">
-                    <span>Hopital de bé</span>
-                    <p>à 1 km de chez vous</p>
+                    <span>Centre Hospitalier Régional de Lomé-Commune</span>
+                    <p>à 100 m de chez vous</p>
                   </div>
                 </Tab>
                 <Tab>
                   <div className="card">
-                    <span>Hopital de bé</span>
-                    <p>à 1 km de chez vous</p>
+                    <span>Clinique Grace Merveilleuse</span>
+                    <p>à 200 m de chez vous</p>
                   </div>
                 </Tab>
                 <Tab>
                   <div className="card">
-                    <span>Hopital de bé</span>
+                    <span>Hôpital de bé</span>
+                    <p>à 400 m de chez vous</p>
+                  </div>
+                </Tab>
+                <Tab>
+                  <div className="card">
+                    <span>Clinique Santé Pour Tous</span>
+                    <p>à 600 m de chez vous</p>
+                  </div>
+                </Tab>
+                <Tab>
+                  <div className="card">
+                    <span>Clinique St Bernardin</span>
                     <p>à 1 km de chez vous</p>
                   </div>
                 </Tab>
@@ -103,8 +116,8 @@ const Localisation = () => {
           </div>
 
           <div className="hopitaux_right">
-            <h3>HOPITAL DE BÉ</h3>
             <TabPanel>
+              <h3>Centre Hospitalier Régional de Lomé-Commune</h3>
               <p>
                 <div className="info_hopital">
                   <div className="visuel">
@@ -144,100 +157,331 @@ const Localisation = () => {
                     <div className="spécialités">
                       <h4>SPÉCIALITÉS</h4>
                       <div className="info">
-                        <span>Lorem ipsum dolor sit amet.</span>
+                        <span> Endocrinologie</span>
                         <br />
-                        <span>Lorem ipsum dolor sit amet.</span>
+                        <span> Oncologie médicale</span>
                         <br />
-                        <span>Lorem ipsum dolor sit amet.</span>
+                        <span>Génétique médicale</span>
                         <br />
-                        <span>Lorem ipsum dolor sit amet.</span>
+                        <span> Gynécologie</span>
                         <br />
-                        <span>Lorem ipsum dolor sit amet.</span>
-                        <br />
-                      </div>
-                    </div>
-                    <div className="map_director">
-                      <div className="message">
-                        clique pour réserver une place -------
-                      </div>
-                      {/* <Link to="/Home"> */}
-                      <button>Itinéraire</button>
-                      {/* </Link> */}
-                    </div>
-                  </div>
-                </div>
-              </p>
-            </TabPanel>
-            <TabPanel>
-              <p>
-                <div className="info_hopital">
-                  <div className="visuel">
-                    <div className="visuel1">
-                      <h4>VISUEL DU CENTRE</h4>
-                      <div className="card_visuel">
-                        {HospitalImage.map((post) => {
-                          return (
-                            <div className="card">
-                              <img
-                                src={post.img}
-                                style={{ width: "100%", height: "100%" }}
-                                alt=""
-                              />
-                            </div>
-                          );
-                        })}
-                        {/* <div className="card">
-            <img src={acctof4} style={{ width: "100%", height: "100%"}} alt="" />
-            </div>
-            <div className="card">
-            <img src={acctof4} style={{ width: "100%", height: "100%"}} alt="" />
-            </div>
-            <div className="card">
-            <img src={acctof4} style={{ width: "100%", height: "100%"}} alt="" />
-            </div>
-            <div className="card">
-            <img src={acctof4} style={{ width: "100%", height: "100%"}} alt="" />
-            </div>
-            <div className="card">
-            <img src={acctof4} style={{ width: "100%", height: "100%"}} alt="" />
-            </div>
-        </div> */}
-                      </div>
-                    </div>
-
-                    <div className="spécialités">
-                      <h4>SPÉCIALITÉS</h4>
-                      <div className="info">
-                        <span>Lorem ipsum dolor sit amet.</span>
-                        <br />
-                        <span>Lorem ipsum dolor sit amet.</span>
-                        <br />
-                        <span>Lorem ipsum dolor sit amet.</span>
-                        <br />
-                        <span>Lorem ipsum dolor sit amet.</span>
-                        <br />
-                        <span>Lorem ipsum dolor sit amet.</span>
+                        <span>continus Urologie</span>
                         <br />
                       </div>
                     </div>
                     <div className="map_director">
                       <div className="message">
-                        clique pour réserver une place -------
+                        clique pour réserver une place -->
                       </div>
-                      {/* <Link to="/Home"> */}
-                      <button>
-                        {" "}
+                      <Button style={{ width: "50%", height: "60%" }}>
                         <a href="https://goo.gl/maps/X6FpHN354HfT5n1p8">
                           Itinéraire
                         </a>
-                      </button>
+                      </Button>{" "}
+                      {/* <Link to="/Home"> */}
+                      {/* <button>Itinéraire</button> */}
                       {/* </Link> */}
                     </div>
                   </div>
                 </div>
               </p>
             </TabPanel>
-            <TabPanel>1</TabPanel>
+            <TabPanel>
+              <h3>Clinique Grace Merveilleuse</h3>
+
+              <p>
+                <div className="info_hopital">
+                  <div className="visuel">
+                    <div className="visuel1">
+                      <h4>VISUEL DU CENTRE</h4>
+                      <div className="card_visuel">
+                        {HospitalImage.map((post) => {
+                          return (
+                            <div className="card">
+                              <img
+                                src={post.img}
+                                style={{ width: "100%", height: "100%" }}
+                                alt=""
+                              />
+                            </div>
+                          );
+                        })}
+                        {/* <div className="card">
+            <img src={acctof4} style={{ width: "100%", height: "100%"}} alt="" />
+            </div>
+            <div className="card">
+            <img src={acctof4} style={{ width: "100%", height: "100%"}} alt="" />
+            </div>
+            <div className="card">
+            <img src={acctof4} style={{ width: "100%", height: "100%"}} alt="" />
+            </div>
+            <div className="card">
+            <img src={acctof4} style={{ width: "100%", height: "100%"}} alt="" />
+            </div>
+            <div className="card">
+            <img src={acctof4} style={{ width: "100%", height: "100%"}} alt="" />
+            </div>
+        </div> */}
+                      </div>
+                    </div>
+
+                    <div className="spécialités">
+                      <h4>SPÉCIALITÉS</h4>
+                      <div className="info">
+                        <span>Médecine nucléaire</span>
+                        <br />
+                        <span>Pharmacie</span>
+                        <br />
+                        <span>Chirurgie thoracique</span>
+                        <br />
+                        <span> Radiothérapie Soins</span>
+                        <br />
+                        <span>Radiologie</span>
+                        <br />
+                      </div>
+                    </div>
+                    <div className="map_director">
+                      <div className="message">
+                        clique pour réserver une place -->
+                      </div>
+                      {/* <Link to="/Home"> */}
+                      <Button style={{ width: "50%", height: "60%" }}>
+                        <a href="https://goo.gl/maps/X6FpHN354HfT5n1p8">
+                          Itinéraire
+                        </a>
+                      </Button>{" "}
+                      {/* <button >
+                        {" "}
+                        
+                      </button> */}
+                      {/* </Link> */}
+                    </div>
+                  </div>
+                </div>
+              </p>
+            </TabPanel>
+            <TabPanel>
+              <h3>Hôpital de bé</h3>
+
+              <p>
+                <div className="info_hopital">
+                  <div className="visuel">
+                    <div className="visuel1">
+                      <h4>VISUEL DU CENTRE</h4>
+                      <div className="card_visuel">
+                        {HospitalImage.map((post) => {
+                          return (
+                            <div className="card">
+                              <img
+                                src={post.img}
+                                style={{ width: "100%", height: "100%" }}
+                                alt=""
+                              />
+                            </div>
+                          );
+                        })}
+                        {/* <div className="card">
+            <img src={acctof4} style={{ width: "100%", height: "100%"}} alt="" />
+            </div>
+            <div className="card">
+            <img src={acctof4} style={{ width: "100%", height: "100%"}} alt="" />
+            </div>
+            <div className="card">
+            <img src={acctof4} style={{ width: "100%", height: "100%"}} alt="" />
+            </div>
+            <div className="card">
+            <img src={acctof4} style={{ width: "100%", height: "100%"}} alt="" />
+            </div>
+            <div className="card">
+            <img src={acctof4} style={{ width: "100%", height: "100%"}} alt="" />
+            </div>
+        </div> */}
+                      </div>
+                    </div>
+
+                    <div className="spécialités">
+                      <h4>SPÉCIALITÉS</h4>
+                      <div className="info">
+                        <span>
+                          {" "}
+                          Endocrinologie Oncologie médicale continus Urologie
+                        </span>
+                        <br />
+                        <span> Gastro-entérologie</span>
+                        <br />
+                        <span>Génétique médicale</span>
+                        <br />
+                        <span> Gynécologie</span>
+                        <br />
+                        <span>Pneumologie </span>
+                        <br />
+                      </div>
+                    </div>
+                    <div className="map_director">
+                      <div className="message">
+                        clique pour réserver une place -->
+                      </div>
+                      <Button style={{ width: "50%", height: "60%" }}>
+                        <a href="https://goo.gl/maps/X6FpHN354HfT5n1p8">
+                          Itinéraire
+                        </a>
+                      </Button>{" "}
+                      {/* <Link to="/Home"> */}
+                      {/* <button>Itinéraire</button> */}
+                      {/* </Link> */}
+                    </div>
+                  </div>
+                </div>
+              </p>
+            </TabPanel>
+            <TabPanel>
+              <h3>Clinique Santé Pour Tous</h3>
+
+              <p>
+                <div className="info_hopital">
+                  <div className="visuel">
+                    <div className="visuel1">
+                      <h4>VISUEL DU CENTRE</h4>
+                      <div className="card_visuel">
+                        {HospitalImage.map((post) => {
+                          return (
+                            <div className="card">
+                              <img
+                                src={post.img}
+                                style={{ width: "100%", height: "100%" }}
+                                alt=""
+                              />
+                            </div>
+                          );
+                        })}
+                        {/* <div className="card">
+            <img src={acctof4} style={{ width: "100%", height: "100%"}} alt="" />
+            </div>
+            <div className="card">
+            <img src={acctof4} style={{ width: "100%", height: "100%"}} alt="" />
+            </div>
+            <div className="card">
+            <img src={acctof4} style={{ width: "100%", height: "100%"}} alt="" />
+            </div>
+            <div className="card">
+            <img src={acctof4} style={{ width: "100%", height: "100%"}} alt="" />
+            </div>
+            <div className="card">
+            <img src={acctof4} style={{ width: "100%", height: "100%"}} alt="" />
+            </div>
+        </div> */}
+                      </div>
+                    </div>
+
+                    <div className="spécialités">
+                      <h4>SPÉCIALITÉS</h4>
+                      <div className="info">
+                        <span>Médecine nucléaire</span>
+                        <br />
+                        <span>Pharmacie</span>
+                        <br />
+                        <span>Chirurgie thoracique</span>
+                        <br />
+                        <span> Radiothérapie Soins</span>
+                        <br />
+                        <span>Radiologie</span>
+                        <br />
+                      </div>
+                    </div>
+                    <div className="map_director">
+                      <div className="message">
+                        clique pour réserver une place -->
+                      </div>
+                      {/* <Link to="/Home"> */}
+                      <Button style={{ width: "50%", height: "60%" }}>
+                        <a href="https://goo.gl/maps/X6FpHN354HfT5n1p8">
+                          Itinéraire
+                        </a>
+                      </Button>{" "}
+                      {/* <button >
+                        {" "}
+                        
+                      </button> */}
+                      {/* </Link> */}
+                    </div>
+                  </div>
+                </div>
+              </p>
+            </TabPanel>
+            <TabPanel>
+              <h3>Clinique St Bernardin</h3>
+
+              <p>
+                <div className="info_hopital">
+                  <div className="visuel">
+                    <div className="visuel1">
+                      <h4>VISUEL DU CENTRE</h4>
+                      <div className="card_visuel">
+                        {HospitalImage.map((post) => {
+                          return (
+                            <div className="card">
+                              <img
+                                src={post.img}
+                                style={{ width: "100%", height: "100%" }}
+                                alt=""
+                              />
+                            </div>
+                          );
+                        })}
+                        {/* <div className="card">
+            <img src={acctof4} style={{ width: "100%", height: "100%"}} alt="" />
+            </div>
+            <div className="card">
+            <img src={acctof4} style={{ width: "100%", height: "100%"}} alt="" />
+            </div>
+            <div className="card">
+            <img src={acctof4} style={{ width: "100%", height: "100%"}} alt="" />
+            </div>
+            <div className="card">
+            <img src={acctof4} style={{ width: "100%", height: "100%"}} alt="" />
+            </div>
+            <div className="card">
+            <img src={acctof4} style={{ width: "100%", height: "100%"}} alt="" />
+            </div>
+        </div> */}
+                      </div>
+                    </div>
+
+                    <div className="spécialités">
+                      <h4>SPÉCIALITÉS</h4>
+                      <div className="info">
+                        <span>Anatomie pathologique</span>
+                        <br />
+                        <span>Chirurgie digestive</span>
+                        <br />
+                        <span>Chirurgie thoracique</span>
+                        <br />
+                        <span> Neurochirurgie</span>
+                        <br />
+                        <span>Radiologie</span>
+                        <br />
+                      </div>
+                    </div>
+                    <div className="map_director">
+                      <div className="message">
+                        clique pour réserver une place -->
+                      </div>
+                      {/* <Link to="/Home"> */}
+                      <Button style={{ width: "50%", height: "60%" }}>
+                        <a href="https://goo.gl/maps/X6FpHN354HfT5n1p8">
+                          Itinéraire
+                        </a>
+                      </Button>{" "}
+                      {/* <button >
+                        {" "}
+                        
+                      </button> */}
+                      {/* </Link> */}
+                    </div>
+                  </div>
+                </div>
+              </p>
+            </TabPanel>
           </div>
         </div>
       </Tabs>

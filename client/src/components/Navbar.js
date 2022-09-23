@@ -111,6 +111,16 @@ function NavBar() {
               Consultaion
             </Nav.Link>
            
+            <Nav.Link
+              href="/Contact"
+              style={{
+                  color: "white",
+                  fontSize:"20px",
+              }}
+            >
+              Contact
+            </Nav.Link>
+           
             <NavDropdown
               title="A propos"
               id="navbarScrollingDropdown"

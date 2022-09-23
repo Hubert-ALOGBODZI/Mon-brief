@@ -44,6 +44,8 @@ import NavBar from "./components/Navbar";
 import { auth } from "./Authentification/Firebase";
 import { useEffect } from "react";
 import { useState } from "react";
+import Admin from "./components/Admin";
+import About from "./components/About";
 
 // import Sectionadmin from "./AdminH/Sectionadmin";
 
@@ -67,7 +69,7 @@ function App() {
           {/* <Consultation /> */}
 
           <Route path="/Home" element={<Home />} />
-          <Route path="/" element={<Consultation />} />
+          <Route path="/Consultation" element={<Consultation />} />
           {/* <Route path="/" element={<Showtab />} /> */}
           {/* <Route path="/" element={<NavBar />} /> */}
           {/* <Route path="/" element={<Sectionadmin />} /> */}
@@ -75,13 +77,16 @@ function App() {
           {/* <Route path="/a" element={<AddUser />} /> */}
           {/* <Route path="/SImpleTabs" element={<SImpleTabs />} /> */}
 
+          {/* <Route path="/About" element={<About />} /> */}
           <Route path="/login" element={<Login />} />
+          <Route path="/" element={<Signup />} />
           <Route path="/Signup" element={<Signup />} />
+          <Route path="/Admin" element={<Admin />} />
           {/* <Route path="/" element={<HomeA name={userName} />} /> */}
 
-          {/* <Route path="/a" element={<UserList />} /> */}
-          {/* <Route path="/add" element={<AddUser />} /> */}
-          {/* <Route path="/edit/:id" element={<EditUser />} />  */}
+          <Route path="/UserList" element={<UserList />} />
+          <Route path="/add" element={<AddUser />} />
+          <Route path="/edit/:id" element={<EditUser />} /> 
         </Routes>
       </div>
 
